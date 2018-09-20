@@ -1,0 +1,676 @@
+/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/*/FONTS/*/
+@font-face {
+  font-family: 'Arial Black';
+  src: url('../fonts/Arial-Black.eot');
+  src: url('../fonts/Arial-Black.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Arial-Black.woff2') format('woff2'),
+  url('../fonts/Arial-Black.woff') format('woff'),
+  url('../fonts/Arial-Black.svg#webfont') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+
+/* khand-regular - latin */
+@font-face {
+  font-family: 'Khand';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/khand-v6-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Khand Regular'), local('Khand-Regular'),
+       url('../fonts/khand-v6-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/khand-v6-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/khand-v6-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/khand-v6-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/khand-v6-latin-regular.svg#Khand') format('svg'); /* Legacy iOS */
+}
+/* khand-500 - latin */
+@font-face {
+  font-family: 'Khand';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/khand-v6-latin-500.eot'); /* IE9 Compat Modes */
+  src: local('Khand Medium'), local('Khand-Medium'),
+       url('../fonts/khand-v6-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/khand-v6-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/khand-v6-latin-500.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/khand-v6-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/khand-v6-latin-500.svg#Khand') format('svg'); /* Legacy iOS */
+}
+/* khand-600 - latin */
+@font-face {
+  font-family: 'Khand';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/khand-v6-latin-600.eot'); /* IE9 Compat Modes */
+  src: local('Khand SemiBold'), local('Khand-SemiBold'),
+       url('../fonts/khand-v6-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/khand-v6-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/khand-v6-latin-600.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/khand-v6-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/khand-v6-latin-600.svg#Khand') format('svg'); /* Legacy iOS */
+}
+/* khand-700 - latin */
+@font-face {
+  font-family: 'Khand';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/khand-v6-latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Khand Bold'), local('Khand-Bold'),
+       url('../fonts/khand-v6-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/khand-v6-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/khand-v6-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/khand-v6-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/khand-v6-latin-700.svg#Khand') format('svg'); /* Legacy iOS */
+}
+
+
+
+.wrapperLanding{
+    width: 960px;
+    height: auto;
+    margin:0 auto;
+}
+
+.wrapperLanding .header{
+    background: url(../img/bg_header.jpg) no-repeat;
+    width: 960px;
+    height: 327px;
+    position: relative;
+    margin-top: 95px;
+}
+
+.header .logo{
+    position: absolute;
+    left:50px;
+    top: -37px;
+}
+
+.header h1{
+    font-family: 'Arial Black', sans-serif;
+    font-weight: bold;
+    font-size: 44px;
+    color:#ffffff;
+    text-align: left;
+    position: absolute;
+    bottom:0;
+    width: 610px;
+    left: 75px;
+    line-height: 45px;
+}
+
+.header .taxi{
+    position: absolute;
+    right: 0;
+    width: 312px;
+}
+.header .taxi img{
+    width: 100%;
+}
+
+/*contenido*/
+
+.section_content{
+    padding: 50px 70px 0px 70px;
+    width: 820px;
+    margin: 0 auto;
+    height: auto;
+}
+
+
+.section_content .Box_60{
+    background-color: #76b72a;
+    width: 60%;
+    padding:20px 0;
+    margin-bottom: 25px;
+}
+
+.section_content .Box_60 p{
+    color:#ffffff;
+    text-align: center;
+    font-family: 'Khand', san-serif, serif;
+    font-weight: 700;
+    font-size: 50px;
+    margin:0;
+    line-height: 1;
+}
+
+.section_content .Box_60 p .sup{
+    top:-25px;
+    font-size: 40%;
+}
+
+.section_content .Box_60 p .normalFont{
+    font-family: 'Khand', san-serif, serif;
+    font-weight: 400;
+    display: block;
+    font-size: 25px;
+    letter-spacing: 3px;
+}
+
+.section_content .Box_50{
+    width: 390px;
+    float: left;
+    text-align: center;
+}
+
+/*.section_content .Box_50 */
+
+
+.color_1{
+    background-color: #0094d3;
+}
+.color_1 h2{
+    font-family: 'Khand', san-serif, serif;
+    font-weight: 700;
+    color:#ffed00;
+    font-size: 55px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.color_1 h2 .hasta{
+    font-family: 'Khand', san-serif, serif;
+    font-weight: 400;
+    display: block;
+    font-size: 40px;
+}
+
+.color_1 h2 .precio{
+    font-size: 80px;
+    display: block;
+}
+
+.color_1 h2 .bajo{
+    color:#ffffff;
+}
+
+.color_1 h3{
+    color:#ffffff;
+    text-align:center;
+    font-family: 'Khand', san-serif, serif;
+    font-weight: 400;
+    margin-top: 0;
+    font-size: 33px;
+}
+
+.section_1{
+    background-color: #76b72a;
+    padding: 40px 0;
+}
+
+.section_1 p{
+    font-family: 'Khand', san-serif, serif;
+    font-weight: 400;
+    color:#ffffff;
+    text-align: center;
+    font-size: 36px;
+    margin: 0;
+    line-height: 1;
+}
+
+.section_1 p span{
+    color: #ffed00;
+    display: block;
+    font-weight: 700;
+    font-size: 45px;
+}
+
+.section_2{
+    background-color: #0094d3;
+    padding: 40px 0;
+    margin-top: 25px;
+}
+
+.section_2 p{
+    margin: 0;
+    font-family: 'Khand', san-serif, serif;
+    font-weight: 400;
+    font-size: 30px;
+    color:#ffffff;
+    line-height: 1;
+}
+
+.section_2 p span {
+    display: block;
+}
+
+
+.sep{
+    margin:70px 0;
+    height: 1px;
+    background-color: #2897d5;
+}
+
+.section_mantencion{
+    width: 840px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.section_mantencion .textmant{
+    color:#2897d5;
+    font-size: 30px;
+    font-family: 'Khand', san-serif, serif;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 0 70px 0;
+}
+
+.section_mantencion .grid{
+    width: 840px;
+    height: auto;
+}
+
+.section_mantencion .grid .grid_box {
+    width: 420px;
+    float: left;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+.colorBox_1{
+    background: #1d96d4 url(../img/mantencion.png) no-repeat 15px 30px;
+    padding-left: 95px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 0;
+}
+
+.colorBox_2{
+    background: #76b82a url(../img/sistema.png) no-repeat 15px 30px;
+    padding-left: 95px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 0;
+}
+.colorBox_3{
+    background: #f28a00 url(../img/lub.png) no-repeat 15px 30px;
+    padding-left: 95px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 0;
+}
+.colorBox_4{
+    background: #ffd500 url(../img/aire.png) no-repeat 15px 30px;
+    padding-left: 95px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 0;
+}
+.colorBox_5{
+    background: #952886 url(../img/combustible.png) no-repeat 15px 30px;
+    padding-left: 95px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 0;
+}
+.colorBox_6{
+    background: #003259 url(../img/arranque.png) no-repeat 15px 30px;
+    padding-left: 95px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 0;
+}
+
+.grid_box-full{
+    background: #2897d5 url(../img/temp.png) no-repeat 17% center;
+    padding:30px 0;
+}
+
+.grid_box-full p {
+    color:#ffffff;
+    font-family: 'Khand', san-serif, serif;
+    font-weight: 700;
+    font-size: 30px;
+    margin: 0 auto;
+    text-align: left;
+    width: 400px;
+    padding-bottom: 10px;
+}
+
+.grid_box-full span{
+    color:#ffffff;
+    font-family: 'Khand', san-serif, serif;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0 auto;
+    width: 400px;
+    display: block;
+    text-align: left !important;
+}
+
+.grid_box_content{
+    color:#ffffff;
+    text-align: left;
+    font-family: 'Khand', san-serif, serif;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.grid_box_content p{
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0;
+}
+
+.claim{
+    padding:70px 0;
+    width: 840px;
+    margin:0 auto;
+    height: auto;
+    font-family: 'Khand', san-serif, serif;
+    font-weight: 400;
+    text-align: center;
+    color:#706f6f;
+    font-size: 32px;
+}
+
+.claim span {
+       position: relative;
+       top: -5px;
+       margin-left: 15px;
+}
+
+.claim span > img{
+        width: 230px;
+}
+
+.footer{
+    background-color: #f2f1f1;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    padding: 10px 20px;
+}
+
+.footer p {
+    font-size: 10px;
+    color: #706f6f;
+    font-family: "Helvetica", Tahoma, sans-serif;
+}
+
+.footer p .goOut{
+    color: #706f6f;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+.pdL{
+    margin-left: 12px;
+}
+
+.pdR{
+   margin-right: 12px;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
